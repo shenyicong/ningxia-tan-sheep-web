@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影像志 | 我的滩羊手记</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">🐑 我的滩羊手记</a>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> 关于我</a></li>
+                <li><a href="categories.html"><i class="fas fa-book"></i> 探索笔记</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> 滩羊计划</a></li>
+                <li><a href="gallery.html" class="active"><i class="fas fa-images"></i> 影像志</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> 加入探索</a></li>
+            </ul>
+            <div class="nav-tools">
+                <button class="theme-toggle" id="themeToggle" title="切换夜间模式"><i class="fas fa-moon"></i></button>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="page-header">
+        <div class="container">
+            <h1>📷 影像志</h1>
+            <p>用镜头记录滩羊的每一个面貌——牧场的清晨、餐桌的热气、市井的烟火</p>
+        </div>
+    </header>
+
+    <!-- 主内容 -->
+    <main class="container" style="margin-top:50px;">
+
+        <!-- 介绍语 -->
+        <section style="max-width:700px;margin:0 auto 50px;text-align:center;">
+            <p style="font-size:1.08rem;color:var(--text-muted);line-height:1.9;">
+                这里收录了我在探索宁夏滩羊过程中拍下的影像。一张旧单反、一双脚和一颗好奇心，
+                就是我的全部装备。照片不一定专业，但每一张都记录着真实的现场与感受。
+            </p>
+        </section>
+
+        <!-- 分类筛选 -->
+        <div class="gallery-filter">
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="field"><i class="fas fa-mountain"></i> 牧场风光</button>
+                <button class="filter-btn" data-filter="food"><i class="fas fa-utensils"></i> 美食风味</button>
+                <button class="filter-btn" data-filter="store"><i class="fas fa-store"></i> 餐厅市井</button>
+                <button class="filter-btn" data-filter="culture"><i class="fas fa-scroll"></i> 文化宣传</button>
+            </div>
+        </div>
+
+        <!-- 瀑布流图库 -->
+        <div class="gallery-grid">
+
+            <!-- 牧场风光 -->
+            <div class="gallery-item" data-category="field">
+                <img src="./image/放牧.png" alt="盐池牧场放牧" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>盐池牧场的清晨</h3>
+                        <span><i class="fas fa-map-marker-alt"></i> 宁夏盐池 · 2025.11</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 美食风味 -->
+            <div class="gallery-item" data-category="food">
+                <img src="./image/肉1.jpg" alt="滩羊肉" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>新鲜切割的滩羊肉</h3>
+                        <span><i class="fas fa-utensils"></i> 风味实验 · 2025.12</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 餐厅市井 -->
+            <div class="gallery-item" data-category="store">
+                <img src="./image/店面1.jpg" alt="老字号店面" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>老毛手抓的招牌</h3>
+                        <span><i class="fas fa-store"></i> 银川 · 2025.12</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 美食风味 -->
+            <div class="gallery-item" data-category="food">
+                <img src="./image/肉2.jpg" alt="手抓羊肉" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>一手抓，一口香</h3>
+                        <span><i class="fas fa-utensils"></i> 田野走访 · 2025.11</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 文化宣传 -->
+            <div class="gallery-item" data-category="culture">
+                <img src="./image/宣传1.jpg" alt="宣传图" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>宁夏滩羊品牌宣传</h3>
+                        <span><i class="fas fa-scroll"></i> 文化探索 · 2026.01</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 美食风味 -->
+            <div class="gallery-item" data-category="food">
+                <img src="./image/肉3.jpg" alt="红焖羊肉" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>第四次实验：成功的红焖</h3>
+                        <span><i class="fas fa-utensils"></i> 风味实验 · 2026.01</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 餐厅市井 -->
+            <div class="gallery-item" data-category="store">
+                <img src="./image/店面2.jpg" alt="店面内景" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>传统清真馆子的内景</h3>
+                        <span><i class="fas fa-store"></i> 银川 · 2025.12</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 文化宣传 -->
+            <div class="gallery-item" data-category="culture">
+                <img src="./image/宣传2.jpg" alt="历史文献" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>清代文献中的滩羊记载</h3>
+                        <span><i class="fas fa-scroll"></i> 文史钩沉 · 2026.03</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 美食风味 -->
+            <div class="gallery-item" data-category="food">
+                <img src="./image/肉4.jpg" alt="清炖羊肉" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>清炖：只需盐、水和时间</h3>
+                        <span><i class="fas fa-utensils"></i> 风味实验 · 2026.03</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 餐厅市井 -->
+            <div class="gallery-item" data-category="store">
+                <img src="./image/店面3.jpg" alt="夜市" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>银川夜市的滩羊摊</h3>
+                        <span><i class="fas fa-store"></i> 银川夜市 · 2026.01</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 文化宣传 -->
+            <div class="gallery-item" data-category="culture">
+                <img src="./image/宣传3.jpg" alt="宣传活动" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>滩羊文化推广活动现场</h3>
+                        <span><i class="fas fa-scroll"></i> 文化探索 · 2026.02</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 美食风味 -->
+            <div class="gallery-item" data-category="food">
+                <img src="./image/肉5.jpg" alt="涮羊肉" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>涮锅里的滩羊卷</h3>
+                        <span><i class="fas fa-utensils"></i> 风味实验 · 2026.02</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 美食风味 -->
+            <div class="gallery-item" data-category="food">
+                <img src="./image/肉6.jpg" alt="烤羊肉" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>碳火烤制的滩羊排</h3>
+                        <span><i class="fas fa-utensils"></i> 田野走访 · 2026.03</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 文化宣传 -->
+            <div class="gallery-item" data-category="culture">
+                <img src="./image/24节气食谱.jpg" alt="24节气食谱" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>24节气滩羊食谱计划</h3>
+                        <span><i class="fas fa-scroll"></i> 项目进展 · 2026.03</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 拍摄心得 -->
+        <section style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px;margin-bottom:70px;box-shadow:var(--shadow-sm);">
+            <h2 class="section-title" style="margin-bottom:30px;">拍摄心得</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;">
+                <div style="display:flex;gap:14px;align-items:flex-start;">
+                    <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0;">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div>
+                        <h3 style="color:var(--dark);margin-bottom:5px;font-size:1rem;transition:color var(--transition);">光线决定一切</h3>
+                        <p style="color:var(--text-muted);font-size:.88rem;line-height:1.65;">在牧场拍摄，清晨6-8点的侧光最美。午后的食物拍摄，散射的自然光胜过任何补光灯。</p>
+                    </div>
+                </div>
+                <div style="display:flex;gap:14px;align-items:flex-start;">
+                    <div style="width:44px;height:44px;background:linear-gradient(135deg,#27ae60,#2ecc71);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0;">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div>
+                        <h3 style="color:var(--dark);margin-bottom:5px;font-size:1rem;transition:color var(--transition);">先交朋友再拍照</h3>
+                        <p style="color:var(--text-muted);font-size:.88rem;line-height:1.65;">在餐厅和牧场，我总是先聊天，让对方放松。照片里的人神情自然，才是真正的记录。</p>
+                    </div>
+                </div>
+                <div style="display:flex;gap:14px;align-items:flex-start;">
+                    <div style="width:44px;height:44px;background:linear-gradient(135deg,#8e44ad,#9b59b6);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0;">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div>
+                        <h3 style="color:var(--dark);margin-bottom:5px;font-size:1rem;transition:color var(--transition);">细节比全景更有力</h3>
+                        <p style="color:var(--text-muted);font-size:.88rem;line-height:1.65;">一块羊肉的纹理、一只手的动作、一碗汤的热气——这些局部往往比全景更能传达感受。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 灯箱 -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-inner">
+            <button class="lightbox-close" title="关闭">×</button>
+            <img class="lightbox-img" src="" alt="放大图">
+            <p class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🐑 我的滩羊手记</h3>
+                    <p>一个宁夏青年的滩羊风物志</p>
+                    <div class="social-links">
+                        <a href="#" title="微信"><i class="fab fa-weixin"></i></a>
+                        <a href="#" title="微博"><i class="fab fa-weibo"></i></a>
+                        <a href="#" title="知乎"><i class="fab fa-zhihu"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                        <li><a href="about.html"><i class="fas fa-user"></i> 关于我</a></li>
+                        <li><a href="categories.html"><i class="fas fa-book"></i> 探索笔记</a></li>
+                        <li><a href="projects.html"><i class="fas fa-project-diagram"></i> 滩羊计划</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>影像分类</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-mountain"></i> 牧场风光</a></li>
+                        <li><a href="#"><i class="fas fa-utensils"></i> 美食风味</a></li>
+                        <li><a href="#"><i class="fas fa-store"></i> 餐厅市井</a></li>
+                        <li><a href="#"><i class="fas fa-scroll"></i> 文化宣传</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我</h3>
+                    <p><i class="fas fa-envelope"></i> lingqi514@qq.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 宁夏 · 西安 · 中国</p>
+                    <p>欢迎分享你的滩羊故事</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 我的滩羊手记 · 一个前端学习者的个人项目</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

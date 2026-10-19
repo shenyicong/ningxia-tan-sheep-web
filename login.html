@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入探索 | 我的滩羊手记</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">🐑 我的滩羊手记</a>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> 关于我</a></li>
+                <li><a href="categories.html"><i class="fas fa-book"></i> 探索笔记</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> 滩羊计划</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> 影像志</a></li>
+                <li><a href="login.html" class="active"><i class="fas fa-sign-in-alt"></i> 加入探索</a></li>
+            </ul>
+            <div class="nav-tools">
+                <button class="theme-toggle" id="themeToggle" title="切换夜间模式"><i class="fas fa-moon"></i></button>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 登录/注册主体 -->
+    <div class="login-page-wrapper">
+        <div class="login-container">
+            <!-- 左侧介绍区 -->
+            <div class="login-left">
+                <h1>加入探索</h1>
+                <p>登录或注册账户，与我一起深入探索宁夏滩羊的世界</p>
+                <div class="login-features">
+                    <div class="feature">
+                        <i class="fas fa-paper-plane"></i>
+                        <div>
+                            <h3>发送消息</h3>
+                            <p>登录后直接给我发送你的想法、建议或有趣的滩羊故事</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-newspaper"></i>
+                        <div>
+                            <h3>探索周报</h3>
+                            <p>每周收到我的探索周报，包含最新笔记、项目进展和独家内容</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-comments"></i>
+                        <div>
+                            <h3>参与讨论</h3>
+                            <p>在文章下留言评论，与我和其他探索者自由交流想法</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-gift"></i>
+                        <div>
+                            <h3>专属彩蛋</h3>
+                            <p>解锁专属文章、高清原图、失败实验集锦等隐藏内容</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧表单区 -->
+            <div class="login-right">
+                <div class="login-form-container">
+
+                    <!-- 全局成功提示 -->
+                    <div id="successToast" class="success-toast" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="toast-msg"></div>
+                    </div>
+
+                    <!-- 登录表单（默认显示） -->
+                    <form id="communityForm" class="login-form">
+                        <h2>账户登录</h2>
+                        <p>欢迎回来，继续探索之旅</p>
+                        <div class="form-group">
+                            <label for="username"><i class="fas fa-user"></i> 用户名</label>
+                            <input type="text" id="username" placeholder="请输入用户名（3-15位）" required minlength="3" maxlength="15" autocomplete="username">
+                            <div class="error-message" id="usernameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><i class="fas fa-lock"></i> 密码</label>
+                            <input type="password" id="password" placeholder="请输入密码（至少8位）" required minlength="8" maxlength="20" autocomplete="current-password">
+                            <div class="error-message" id="passwordError"></div>
+                        </div>
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" id="remember">
+                                <span>记住我</span>
+                            </label>
+                            <a href="#" class="forgot-password">忘记密码？</a>
+                        </div>
+                        <button type="submit" class="login-btn">
+                            <i class="fas fa-sign-in-alt"></i> 立即登录
+                        </button>
+                        <div class="register-link">
+                            <p>还没有账户？ <a href="#" id="registerLink">立即注册 →</a></p>
+                        </div>
+                    </form>
+
+                    <!-- 注册表单 -->
+                    <form id="registerForm" class="login-form" style="display:none;">
+                        <h2>创建账户</h2>
+                        <p>加入我们，一起探索宁夏滩羊</p>
+                        <div class="form-group">
+                            <label for="regUsername"><i class="fas fa-user"></i> 用户名</label>
+                            <input type="text" id="regUsername" placeholder="3-15位字母/数字" required minlength="3" maxlength="15" autocomplete="username">
+                            <div class="error-message" id="regUsernameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail"><i class="fas fa-envelope"></i> 邮箱</label>
+                            <input type="email" id="regEmail" placeholder="请输入有效邮箱地址" required autocomplete="email">
+                            <div class="error-message" id="regEmailError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword"><i class="fas fa-lock"></i> 密码</label>
+                            <input type="password" id="regPassword" placeholder="8-20位，须包含字母和数字" required minlength="8" maxlength="20" autocomplete="new-password">
+                            <div class="password-strength">
+                                <div class="strength-bar"><div class="strength-fill"></div></div>
+                                <span class="strength-text"></span>
+                            </div>
+                            <div class="error-message" id="regPasswordError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword"><i class="fas fa-lock"></i> 确认密码</label>
+                            <input type="password" id="confirmPassword" placeholder="再次输入密码" required autocomplete="new-password">
+                            <div class="error-message" id="confirmPasswordError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;font-weight:400;">
+                                <input type="checkbox" id="agreeTerms" required style="margin-top:3px;">
+                                <span style="font-size:.88rem;">我已阅读并同意 <a href="#" style="color:var(--primary);">社区准则</a> 和 <a href="#" style="color:var(--primary);">隐私政策</a></span>
+                            </label>
+                        </div>
+                        <button type="submit" class="login-btn">
+                            <i class="fas fa-user-plus"></i> 完成注册
+                        </button>
+                        <div class="register-link">
+                            <p>已有账户？ <a href="#" id="loginLink2">← 返回登录</a></p>
+                        </div>
+                    </form>
+
+                    <!-- 登录后：发送消息表单 -->
+                    <form id="contactForm" class="login-form" style="display:none;">
+                        <h2>发送消息 ✉️</h2>
+                        <p id="welcomeUser" style="color:var(--primary);font-weight:600;margin-bottom:20px;"></p>
+                        <div class="form-group">
+                            <label><i class="fas fa-tag"></i> 消息主题</label>
+                            <select>
+                                <option value="">请选择主题...</option>
+                                <option>🌾 关于田野走访</option>
+                                <option>🍲 关于风味实验</option>
+                                <option>📚 关于文史研究</option>
+                                <option>🤝 寻求合作</option>
+                                <option>💬 单纯聊聊天</option>
+                                <option>🐛 反馈网站问题</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-pen"></i> 消息内容</label>
+                            <textarea placeholder="写下你想对我说的话..." rows="5" required minlength="10" maxlength="500" style="resize:vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="login-btn">
+                            <i class="fas fa-paper-plane"></i> 发送消息
+                        </button>
+                        <div class="register-link">
+                            <p><a href="#" id="logoutLink" style="color:var(--text-muted);"><i class="fas fa-sign-out-alt"></i> 退出登录</a></p>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🐑 我的滩羊手记</h3>
+                    <p>一个宁夏青年的滩羊风物志</p>
+                    <div class="social-links">
+                        <a href="#" title="微信"><i class="fab fa-weixin"></i></a>
+                        <a href="#" title="微博"><i class="fab fa-weibo"></i></a>
+                        <a href="#" title="知乎"><i class="fab fa-zhihu"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>探索分类</h3>
+                    <ul>
+                        <li><a href="categories.html"><i class="fas fa-map-marker-alt"></i> 田野走访</a></li>
+                        <li><a href="categories.html"><i class="fas fa-utensils"></i> 风味实验</a></li>
+                        <li><a href="categories.html"><i class="fas fa-search"></i> 文史钩沉</a></li>
+                        <li><a href="categories.html"><i class="fas fa-chart-bar"></i> 数据漫谈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我</h3>
+                    <p><i class="fas fa-envelope"></i> lingqi514@qq.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 宁夏 · 西安 · 中国</p>
+                    <p>欢迎分享你的滩羊故事</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 我的滩羊手记 · 一个前端学习者的个人项目</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // 登录后欢迎语
+    document.addEventListener('DOMContentLoaded', () => {
+        const user = localStorage.getItem('blogUser');
+        const welcome = document.getElementById('welcomeUser');
+        if (user && welcome) welcome.textContent = '你好，' + user + '！请给我留言 👋';
+    });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

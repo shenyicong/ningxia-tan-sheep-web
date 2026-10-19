@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探索笔记 | 我的滩羊手记</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">🐑 我的滩羊手记</a>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> 关于我</a></li>
+                <li><a href="categories.html" class="active"><i class="fas fa-book"></i> 探索笔记</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> 滩羊计划</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> 影像志</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> 加入探索</a></li>
+            </ul>
+            <div class="nav-tools">
+                <button class="theme-toggle" id="themeToggle" title="切换夜间模式"><i class="fas fa-moon"></i></button>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="page-header">
+        <div class="container">
+            <h1>探索笔记</h1>
+            <p>按主题分类浏览我的探索记录</p>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container">
+        <!-- 分类导航 -->
+        <section class="categories-nav">
+            <div class="categories-tabs">
+                <button class="tab-btn active" data-category="all">全部笔记</button>
+                <button class="tab-btn" data-category="field"><i class="fas fa-map-marker-alt"></i> 田野走访</button>
+                <button class="tab-btn" data-category="flavor"><i class="fas fa-utensils"></i> 风味实验</button>
+                <button class="tab-btn" data-category="history"><i class="fas fa-search"></i> 文史钩沉</button>
+                <button class="tab-btn" data-category="data"><i class="fas fa-chart-bar"></i> 数据漫谈</button>
+                <button class="tab-btn" data-category="thought"><i class="fas fa-lightbulb"></i> 思考随感</button>
+            </div>
+        </section>
+
+        <!-- 笔记列表 -->
+        <section class="notes-list">
+            <!-- 田野走访 -->
+            <div class="notes-category" id="field">
+                <h2 class="category-title"><i class="fas fa-map-marker-alt"></i> 田野走访</h2>
+                <p class="category-desc">走进牧场、市场、餐厅，与滩羊的"一线人员"对话</p>
+                
+                <div class="category-notes">
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2026-03-15</span>
+                            <span class="article-readtime">阅读 8 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">盐池牧场的春天：跟着老马去放羊</a></h3>
+                        <p class="article-excerpt">三月的盐池，草色遥看近却无。我跟着养殖户老马，体验了一天真正的牧羊生活。他告诉我："滩羊吃的是中草药，喝的是矿泉水"，这话一点不假...</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2026-01-20</span>
+                            <span class="article-readtime">阅读 12 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">凌晨四点的牛羊肉市场：滩羊的交易现场</a></h3>
+                        <p class="article-excerpt">为了看到滩羊交易的完整流程，我在凌晨四点来到了银川最大的牛羊肉批发市场。这里的滩羊交易，有一套外人看不懂的"暗语"和规则...</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2025-12-10</span>
+                            <span class="article-readtime">阅读 10 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">老字号羊肉馆的坚守与创新</a></h3>
+                        <p class="article-excerpt">在银川经营了30年的"老毛手抓"，第三代传人小毛告诉我，他们家做滩羊的秘诀不是秘方，而是"不变"——不变的货源，不变的做法，不变的味道...</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 风味实验 -->
+            <div class="notes-category" id="flavor">
+                <h2 class="category-title"><i class="fas fa-utensils"></i> 风味实验</h2>
+                <p class="category-desc">厨房里的滩羊实验，记录成功与失败</p>
+                
+                <div class="category-notes">
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2026-03-10</span>
+                            <span class="article-readtime">阅读 6 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">清炖滩羊的极致：只有盐、水和时间</a></h3>
+                        <p class="article-excerpt">为了找到滩羊最本真的味道，我尝试了最简单的做法：只用滩羊肉、水和盐。结果让我震惊——原来好的食材真的只需要最简单的烹饪...</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2026-01-15</span>
+                            <span class="article-readtime">阅读 15 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">三次失败后，我终于做出了满意的红焖滩羊肉</a></h3>
+                        <p class="article-excerpt">记录了我三次失败的红焖羊肉实验：第一次太膻，第二次太柴，第三次调味不对。第四次终于成功，我总结了几个关键点...</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2025-11-30</span>
+                            <span class="article-readtime">阅读 8 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">滩羊vs普通羊肉：一次盲测实验</a></h3>
+                        <p class="article-excerpt">我邀请了5位朋友，对滩羊和普通羊肉进行了盲测。结果令人意外：不是所有人都能准确分辨，但分辨出来的人都给出了相似的理由...</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 文史钩沉 -->
+            <div class="notes-category" id="history">
+                <h2 class="category-title"><i class="fas fa-search"></i> 文史钩沉</h2>
+                <p class="category-desc">在故纸堆中寻找滩羊的前世今生</p>
+                
+                <div class="category-notes">
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2026-03-05</span>
+                            <span class="article-readtime">阅读 12 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">《宁夏府志》中的滩羊：被遗忘的贡品历史</a></h3>
+                        <p class="article-excerpt">在图书馆泡了三天，终于在清代《宁夏府志》中找到了关于滩羊作为"贡羊"的记载。原来，滩羊的"皇室血统"可以追溯到300多年前...</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2026-02-20</span>
+                            <span class="article-readtime">阅读 10 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">丝绸之路上的滩羊：可能的美食交流使者</a></h3>
+                        <p class="article-excerpt">宁夏是古丝绸之路的重要节点。我在想，滩羊有没有可能也曾沿着这条通道，走向更远的地方？有一些有趣的线索...</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 数据漫谈 -->
+            <div class="notes-category" id="data">
+                <h2 class="category-title"><i class="fas fa-chart-bar"></i> 数据漫谈</h2>
+                <p class="category-desc">用数字和图表解读滩羊</p>
+                
+                <div class="category-notes">
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2026-02-28</span>
+                            <span class="article-readtime">阅读 8 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">滩羊营养成分大揭秘：数据不会说谎</a></h3>
+                        <p class="article-excerpt">我收集了滩羊与普通羊肉的营养成分数据，做了对比分析。结果发现，滩羊的不饱和脂肪酸含量确实更高，这或许就是它"不膻"的科学解释...</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2026-01-10</span>
+                            <span class="article-readtime">阅读 6 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">宁夏滩羊产业数据可视化</a></h3>
+                        <p class="article-excerpt">整理了宁夏滩羊的养殖规模、产值、销售区域等数据，用图表的形式呈现。发现了一些有趣的趋势...</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 思考随感 -->
+            <div class="notes-category" id="thought">
+                <h2 class="category-title"><i class="fas fa-lightbulb"></i> 思考随感</h2>
+                <p class="category-desc">关于滩羊、家乡、记录的杂思</p>
+                
+                <div class="category-notes">
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2026-02-15</span>
+                            <span class="article-readtime">阅读 5 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">当我们谈论"家乡味道"时，我们在谈论什么</a></h3>
+                        <p class="article-excerpt">做了三个月滩羊探索后，我突然想：我们对"家乡味道"的执念，到底是对味道本身的怀念，还是对一段时光、一种情感的投射？</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="article-item">
+                        <div class="article-meta">
+                            <span class="article-date">2025-12-30</span>
+                            <span class="article-readtime">阅读 7 分钟</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">记录的力量：为什么我要写这个博客</a></h3>
+                        <p class="article-excerpt">朋友问我：你花这么多时间记录滩羊，有什么实际意义？我想了想，写了这篇关于"记录"本身的思考。</p>
+                        <a href="#" class="article-read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>我的滩羊手记</h3>
+                    <p>一个宁夏青年的滩羊风物志</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-zhihu"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>探索分类</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 田野走访</a></li>
+                        <li><a href="#"><i class="fas fa-utensils"></i> 风味实验</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i> 文史钩沉</a></li>
+                        <li><a href="#"><i class="fas fa-chart-bar"></i> 数据漫谈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我</h3>
+                    <p><i class="fas fa-envelope"></i> lingqi514@qq.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 宁夏 · 西安 · 中国</p>
+                    <p>欢迎分享你的滩羊故事</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 我的滩羊手记. 一个前端学习者的个人项目</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

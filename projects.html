@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滩羊计划 | 我的滩羊手记</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">🐑 我的滩羊手记</a>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> 关于我</a></li>
+                <li><a href="categories.html"><i class="fas fa-book"></i> 探索笔记</a></li>
+                <li><a href="projects.html" class="active"><i class="fas fa-project-diagram"></i> 滩羊计划</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> 影像志</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> 加入探索</a></li>
+            </ul>
+            <div class="nav-tools">
+                <button class="theme-toggle" id="themeToggle" title="切换夜间模式"><i class="fas fa-moon"></i></button>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="page-header">
+        <div class="container">
+            <h1>滩羊计划</h1>
+            <p>我正在进行和计划中的滩羊相关项目</p>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container">
+        <!-- 项目介绍 -->
+        <section class="projects-intro">
+            <h2 class="section-title">我的滩羊项目</h2>
+            <p class="intro-text">除了日常的探索笔记，我还会围绕滩羊做一些"项目式"的探索。这些项目通常需要更多的时间、更系统的规划，也往往能带来更深的洞察。下面是正在进行的和计划中的项目。</p>
+        </section>
+
+        <!-- 项目展示 -->
+        <section class="projects-showcase">
+            <div class="project-card large">
+                <div class="project-status status-ongoing">进行中</div>
+                <div class="project-image">
+                    <img src="./image/24节气食谱.jpg" alt="24节气食谱" 
+                    style="width: 800px; height: auto; display: block; margin: 0 auto;">
+                </div>
+                <div class="project-content">
+                    <h3>滩羊24节气食谱</h3>
+                    <p class="project-desc">中国传统饮食讲究"不时不食"，我尝试根据24节气，为滩羊设计不同的烹饪方式。春天清炖，夏天凉拌，秋天红烧，冬天煲汤。每个节气发布一道应季的滩羊菜谱，并记录烹饪心得和背后的饮食文化思考。</p>
+                    <div class="project-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                        <span class="progress-text">已完成6/24个节气</span>
+                    </div>
+                    <div class="project-update">
+                        <h4>最新进展（2024.03.20）</h4>
+                        <p>刚刚完成了"春分"的食谱：清炖羊肉。尝试了三次，终于找到了白萝卜和滩羊的完美平衡。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-status status-ongoing">进行中</div>
+                <div class="project-image">
+                    <img src="./image/肉4.jpg" alt="风味地图"
+                    style="width: 800px; height: auto; display: block; margin: 0 auto;">
+                </div>
+                <div class="project-content">
+                    <h3>滩羊风味地图</h3>
+                    <p class="project-desc">用地图的形式，标记我品尝过的滩羊餐厅和菜品。包括位置、人均消费、推荐菜品、我的评分和简短评价。最终目标是做成一个互动地图，让来宁夏的游客可以按图索骥。</p>
+                    <div class="project-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                        <span class="progress-text">已收录12家餐厅</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-status status-planning">计划中</div>
+                <div class="project-image">
+                    <img src="./image/店面1.jpg" alt="家庭食谱">
+                </div>
+                <div class="project-content">
+                    <h3>家庭滩羊食谱记录计划</h3>
+                    <p class="project-desc">采访我的家人、亲戚、朋友，记录他们家的"独门"滩羊做法。计划收录至少10个家庭的私房食谱，并制作成一本小册子。这不仅是食谱的收集，更是家族记忆的保存。</p>
+                    <div class="project-plan">
+                        <h4>下一步计划</h4>
+                        <p>先从我的外婆开始，记录她的红焖羊肉。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-status status-planning">计划中</div>
+                <div class="project-image">
+                    <img src="./image/肉3.jpg" alt="文创设计"
+                    style="width:800px; height: auto; display: block; margin: 0 auto;">
+                </div>
+                <div class="project-content">
+                    <h3>滩羊主题文创设计</h3>
+                    <p class="project-desc">设计一系列滩羊主题的文创产品：手机壁纸、表情包、明信片、帆布袋等。不求商业化，只是出于兴趣，也想探索"地域风物"的视觉化表达可能。</p>
+                    <div class="project-plan">
+                        <h4>构思中</h4>
+                        <p>正在学习Illustrator，计划先设计一套简单的滩羊主题手机壁纸。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目时间线 -->
+        <section class="project-timeline">
+            <h2 class="section-title">项目时间线</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023.10</div>
+                    <div class="timeline-content">
+                        <h3>项目启动</h3>
+                        <p>决定开始"我的滩羊手记"项目，建立博客框架，写下第一篇探索笔记。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023.12</div>
+                    <div class="timeline-content">
+                        <h3>风味地图启动</h3>
+                        <p>开始系统性地记录和评价吃过的滩羊餐厅，建立风味地图数据库。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024.01</div>
+                    <div class="timeline-content">
+                        <h3>24节气食谱启动</h3>
+                        <p>在冬至发布了第一个节气食谱，正式启动24节气食谱项目。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024.03</div>
+                    <div class="timeline-content">
+                        <h3>完成春季节气</h3>
+                        <p>完成了立春、雨水、惊蛰、春分四个节气的滩羊食谱。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024.06</div>
+                    <div class="timeline-content">
+                        <h3>计划：家庭食谱启动</h3>
+                        <p>计划在暑假期间，开始家庭食谱的收集工作。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024.10</div>
+                    <div class="timeline-content">
+                        <h3>项目一周年</h3>
+                        <p>"我的滩羊手记"项目一周年，计划发布一份年度总结报告。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目合作邀请 -->
+        <section class="collaboration">
+            <div class="collab-content">
+                <h2><i class="fas fa-handshake"></i> 寻找合作者</h2>
+                <p>如果你对某个项目感兴趣，或者有相关的技能和经验，欢迎联系我，一起让这些想法变成现实！</p>
+                <p>我正在寻找：</p>
+                <ul>
+                    <li>熟悉宁夏本地餐饮的"地头蛇"</li>
+                    <li>擅长手绘或平面设计的朋友</li>
+                    <li>对饮食文化、地方风物有研究的朋友</li>
+                    <li>单纯对这个项目感兴趣，想参与进来的任何人</li>
+                </ul>
+                <a href="login.html" class="btn">加入探索</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>我的滩羊手记</h3>
+                    <p>一个宁夏青年的滩羊风物志</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-zhihu"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>探索分类</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 田野走访</a></li>
+                        <li><a href="#"><i class="fas fa-utensils"></i> 风味实验</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i> 文史钩沉</a></li>
+                        <li><a href="#"><i class="fas fa-chart-bar"></i> 数据漫谈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我</h3>
+                    <p><i class="fas fa-envelope"></i> lingqi514@qq.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 宁夏 · 西安 · 中国</p>
+                    <p>欢迎分享你的滩羊故事</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 我的滩羊手记. 一个前端学习者的个人项目</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
