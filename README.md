@@ -9,6 +9,8 @@
 [![JS](https://img.shields.io/badge/JavaScript-341%20%E8%A1%8C-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](#)
 [![Deps](https://img.shields.io/badge/Dependencies-0-00ff9d?style=flat-square)](#)
 
+### ▶ [**在线预览 https://shenyicong.github.io/ningxia-tan-sheep-web/**](https://shenyicong.github.io/ningxia-tan-sheep-web/)
+
 </div>
 
 <p align="center">
@@ -102,7 +104,13 @@ ningxia-tan-sheep-web/
 
 双击 `index.html` 即可。
 
-**方式二：本地服务器（推荐，避免个别浏览器对本地文件的限制）**
+**方式二：直接访问线上版（推荐，无需任何环境）**
+
+👉 **https://shenyicong.github.io/ningxia-tan-sheep-web/**
+
+页面已通过 GitHub Pages 托管，手机、平板、任何浏览器都能直接打开，不受本地文件限制。
+
+**方式三：本地服务器（改代码调试用）**
 
 ```bash
 # Python 3
@@ -112,7 +120,7 @@ python -m http.server 8000
 npx serve .
 ```
 
-然后访问 http://localhost:8000
+启动后访问 `http://localhost:8000` 进行本地调试。
 
 ---
 
